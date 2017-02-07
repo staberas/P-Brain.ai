@@ -34,6 +34,28 @@
     <script src="js/resp_types.js"></script>
     <script src="js/iframe.js"></script>
     <div class="container">
+	 <!-- credits: bg image from http://kusakabeworks.net-->
+    <div id="presentlayer" style="background-size: 100% 110%; background-image: url('shibuya_river.jpg'); background-color: red; width: 100%; height: 40%; position: absolute; text-align: center; z-index: 10;"><div style="position: absolute; text-align: center; margin-left: 40%;margin-right: 40%; bottom: 0px;"><em style="color: black;background-color: white;" id="debugemo">Neutral</em><img style=" display: block; margin: auto;" src="avatar.png"></div></div>
+        <div class="right">
+            <div class="chat" data-chat="person2">
+
+            </div>
+            <div style="display: none;" id="writer" class="write">
+                <input id="textbox" type="search" />
+            </div>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript">
+        if (!annyang) {
+            document.getElementById('writer').style.display = 'block';
+        }
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+
         <div class="right">
             <div class="chat" data-chat="person2">
 
