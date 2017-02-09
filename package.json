@@ -17,6 +17,7 @@
     "email": "noreply@github.com"
   },
   "dependencies": {
+    "bindings": "^1.2.1",
     "cheerio": "*",
     "co": "*",
     "co-express": "*",
@@ -34,8 +35,7 @@
     "tabletojson": "*",
     "thunkify-wrap": "*",
     "words-to-num": "*",
-    "x-ray": "*",
-    "xml2json": "*"
+    "x-ray": "*"
   },
   "devDependencies": {
     "ava": "^0.17.0"
