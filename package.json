@@ -17,6 +17,7 @@
     "email": "noreply@github.com"
   },
   "dependencies": {
+    "bindings": "^1.2.1",
     "cheerio": "*",
     "co": "*",
     "co-express": "*",
