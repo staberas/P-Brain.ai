@@ -34,8 +34,7 @@
     "tabletojson": "*",
     "thunkify-wrap": "*",
     "words-to-num": "*",
-    "x-ray": "*",
-    "xml2json": "*"
+    "x-ray": "*"
   },
   "devDependencies": {
     "ava": "^0.17.0"
