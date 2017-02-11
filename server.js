@@ -38,7 +38,7 @@ app.get('/api/ask', wrap(function * (req, res) {
         res.send(result)
     } catch (e) {
         console.log(e)
-        res.send({msg: {text: 'Sorry, I didnt understand ' + input}, type: 'error'})
+        res.send({msg: {text: 'Sorry, I didn\'t understand ' + input}, type: 'error'})
     }
 }))
 
@@ -55,6 +55,7 @@ io.on('connect', socket => {
             const result = yield search.query(input)
             socket.emit('response', result)
         } catch (e) {
+            console.log(e)
             socket.emit('response', {msg: {text: 'Sorry, I didn\'t understand ' + input}, type: 'error'})
         }
     }))
@@ -70,12 +71,15 @@ const skillsApi = express()
 app.use('/api/skills', skillsApi)
 
 co(function * () {
+    console.log("Loading skills.")
     yield skills.loadSkills(skillsApi, io)
+    console.log("Training recognizer.")
     yield search.train_recognizer(skills.getSkills())
+    console.log("Starting server.")
+    http.listen(config.port, () => {
+        console.log(`Server started on http://localhost:${config.port}`)
+    })
 }).catch(err => {
     console.log(err)
     throw err
 })
-
-http.listen(config.port)
-console.log(`Server started on http://localhost:${config.port}`)
