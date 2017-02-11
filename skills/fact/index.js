@@ -1,6 +1,6 @@
 const google = require('./google')
 const duckduckgo = require('./duckduckgo')
-//const wolframalpha = require('./wolframalpha')
+const wolframalpha = require('./wolframalpha')
 
 const not_found_responses = ['Hmmm I dont seem to know ', 'Sorry I couldn\'t understand ', 'My memory banks dont contain ']
 const resp_functs = [google, duckduckgo]
